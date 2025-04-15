@@ -1,7 +1,4 @@
-
-# 🛠️ Gerenciador de Produtos em Java com JDBC e PostgreSQL
-
-## 🚀 Projeto Finalizado: Gerenciador de Produtos em Java com PostgreSQL
+# 🚀 Gerenciador de Produtos em Java com PostgreSQL
 
 Sistema simples de gerenciamento de produtos que realiza as operações de cadastro, listagem, atualização e remoção, com persistência em banco de dados PostgreSQL. A aplicação roda via terminal e foi estruturada em camadas seguindo o padrão MVC, com separação entre dados, regras de negócio e interface textual.
 

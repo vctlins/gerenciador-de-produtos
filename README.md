@@ -1,18 +1,49 @@
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# 🛠️ Gerenciador de Produtos em Java com JDBC e PostgreSQL
 
-## Folder Structure
+## 🚀 Projeto Finalizado: Gerenciador de Produtos em Java com PostgreSQL
 
-The workspace contains two folders by default, where:
+Sistema simples de gerenciamento de produtos que realiza as operações de cadastro, listagem, atualização e remoção, com persistência em banco de dados PostgreSQL. A aplicação roda via terminal e foi estruturada em camadas seguindo o padrão MVC, com separação entre dados, regras de negócio e interface textual.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Em vez de seguir o caminho tradicional com frameworks que resolvem tudo com uma linha de código, decidi mergulhar mais fundo: **nada de JPA ou Hibernate**. Aqui, tudo foi feito na base do **JDBC**, desde a criação da conexão até a execução manual de SQL com `PreparedStatement` e `ResultSet`. A proposta era justamente entender o que acontece por baixo dos panos e fortalecer minha base.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Essa abordagem me ajudou a consolidar conceitos importantes como a **arquitetura MVC**, o uso dos padrões **DAO e Singleton**, além de reforçar a lógica da **programação orientada a objetos** com foco na organização e separação de responsabilidades.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+---
 
-## Dependency Management
+## 🧱 Estrutura e funcionalidades
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+O projeto oferece todas as operações CRUD, com os dados armazenados de forma persistente em PostgreSQL e a aplicação dividida de forma clara entre modelo, controle, visualização e camada de acesso aos dados.
+
+Foi uma ótima experiência para aprimorar tanto o domínio do Java quanto o raciocínio estruturado por trás do que usamos diariamente com frameworks.
+
+---
+
+## 💡 Tecnologias e padrões usados
+
+- Java
+- PostgreSQL
+- JDBC
+- Padrões de projeto: MVC, DAO, Singleton
+
+---
+
+## 🔧 Requisitos para rodar o projeto
+
+- JDK 11 ou superior
+- PostgreSQL instalado
+- Um banco chamado `produtos_db` com a seguinte tabela:
+
+```sql
+CREATE TABLE produtos (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    preco DOUBLE PRECISION NOT NULL
+);
+```
+
+- Driver JDBC do PostgreSQL (ex: `postgresql-42.7.5.jar` incluído no projeto)
+
+---
+
+> Obs: no Linux/Mac, troque `;` por `:` no classpath

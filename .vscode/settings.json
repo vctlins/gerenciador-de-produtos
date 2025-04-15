@@ -1,0 +1,13 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar"
+        ],
+        "exclude": [
+            "c:\\Users\\Victor Linhares\\Downloads\\postgresql-42.7.5.jar"
+        ]
+    },
+    "java.project.explorer.showNonJavaResources": false
+}
